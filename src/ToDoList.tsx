@@ -79,7 +79,7 @@ function ToDoList() {
     <div>
       {toDoList ? (
         <div>
-          <h1>{toDoList.title}</h1>
+          <h1 className="text-3xl font-bold underline">{toDoList.title}</h1>
           <ul>
             {toDoList.tasks.map((task) => (
               <li key={task.id}>
