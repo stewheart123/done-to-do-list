@@ -7,7 +7,7 @@ interface ToDoItem {
 }
 
 interface ToDoList {
-  title: string;
+  // title: string;
   tasks: ToDoItem[];
 }
 
@@ -21,7 +21,7 @@ function ToDoList() {
       setToDoList(JSON.parse(storedToDoList));
     } else {
       const newToDoList: ToDoList = {
-        title: "My To-Do List",
+        // title: "To-Do",
         tasks: []
       };
       setToDoList(newToDoList);
@@ -78,8 +78,25 @@ function ToDoList() {
   return (
     <div>
       {toDoList ? (
-        <div>
-          <h1 className="text-3xl font-bold underline">{toDoList.title}</h1>
+        <section className="list-container">
+          <div className="logo">done.</div>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              addTask();
+            }}
+          >
+
+              <input
+              className="list-input"
+                type="text"
+                value={newTaskDescription}
+                onChange={(event) => setNewTaskDescription(event.target.value)}
+              />
+
+            <button type="submit">+</button>
+          </form>
+          <div className="list-inner">
           <ul>
             {toDoList.tasks.map((task) => (
               <li key={task.id}>
@@ -88,30 +105,17 @@ function ToDoList() {
                   checked={task.completed}
                   onChange={() => toggleTask(task.id)}
                 />
-                {task.description} {task.completed ? "(completed)" : ""}
+                <p className={task.completed ? "completed" : ""}>{task.description}</p>
                 {task.completed && (
-                  <button onClick={() => deleteTask(task.id)}>Delete</button>
+                  <button onClick={() => deleteTask(task.id)}>X</button>
                 )}
               </li>
             ))}
           </ul>
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-              addTask();
-            }}
-          >
-            <label>
-              New task:
-              <input
-                type="text"
-                value={newTaskDescription}
-                onChange={(event) => setNewTaskDescription(event.target.value)}
-              />
-            </label>
-            <button type="submit">Add task</button>
-          </form>
-        </div>
+          <a href="https://www.linkedin.com/in/stewart-tuckwood-522808184/" target="_blank" className="linkedIn-link">developed by Stewart Tuckwood</a>
+          </div>
+          
+        </section>
       ) : (
         <p>Loading to-do list...</p>
       )}
