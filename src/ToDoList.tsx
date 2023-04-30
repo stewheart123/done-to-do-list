@@ -80,42 +80,44 @@ function ToDoList() {
   return (
     <React.Fragment>
       {toDoList ? (
-        <section className="list-container">
-          <div className="logo">done.</div>
+        <section className="list-container m-auto relative">
+          <div className="logo not-italic font-normal text-3xl leading-none text-gray-900 text-center w-full p-4">done.</div>
           <form
             onSubmit={(event) => {
               event.preventDefault();
               addTask();
             }}
+            className="flex flex-col p-8"
           >
 
               <input
-              className="list-input"
+              className="list-input h-12 w-full text-3xl pl-4"
                 type="text"
                 value={newTaskDescription}
                 onChange={(event) => setNewTaskDescription(event.target.value)}
                 placeholder="to do"
               />
 
-            <button type="submit">+</button>
+            <button type="submit" className="w-10 h-10 bg-orange-600 mt-8 text-white text-3xl flex justify-center font-black">+</button>
           </form>
-          <div className="list-inner">
+          <div className="list-inner h-full p-8 relative overflow-y-scroll">
           <ul>
             {toDoList.tasks.map((task) => (
-              <li key={task.id}>
+              <li key={task.id} className="not-italic font-normal text-3xl flex items-center">
                 <input
                   type="checkbox"
                   checked={task.completed}
                   onChange={() => toggleTask(task.id)}
+                  className="w-8 h-8 mr-5"
                 />
                 <p className={task.completed ? "completed" : ""}>{task.description}</p>
                 {task.completed && (
-                  <button onClick={() => deleteTask(task.id)}>X</button>
+                  <button onClick={() => deleteTask(task.id)} className="m-0 ml-8">X</button>
                 )}
               </li>
             ))}
           </ul>
-          <a href="https://www.linkedin.com/in/stewart-tuckwood-522808184/" target="_blank" className="linkedIn-link">developed by Stewart Tuckwood</a>
+          <a href="https://www.linkedin.com/in/stewart-tuckwood-522808184/" target="_blank" className="linkedIn-link absolute font-normal text-sm">developed by Stewart Tuckwood</a>
           </div>
           
         </section>
