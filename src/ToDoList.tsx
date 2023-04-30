@@ -9,6 +9,7 @@ interface ToDoItem {
 interface ToDoList {
   // title: string;
   tasks: ToDoItem[];
+  nextIdNumber: number;
 }
 
 function ToDoList() {
@@ -22,7 +23,8 @@ function ToDoList() {
     } else {
       const newToDoList: ToDoList = {
         // title: "To-Do",
-        tasks: []
+        tasks: [],
+        nextIdNumber: 0
       };
       setToDoList(newToDoList);
       localStorage.setItem("toDoList", JSON.stringify(newToDoList));
@@ -31,7 +33,7 @@ function ToDoList() {
 
   const addTask = () => {
     const newTask = {
-      id: toDoList!.tasks.length + 1,
+      id: toDoList!.nextIdNumber ++,
       description: newTaskDescription,
       completed: false
     };
@@ -76,7 +78,7 @@ function ToDoList() {
   }, [toDoList]);
 
   return (
-    <div>
+    <React.Fragment>
       {toDoList ? (
         <section className="list-container">
           <div className="logo">done.</div>
@@ -92,6 +94,7 @@ function ToDoList() {
                 type="text"
                 value={newTaskDescription}
                 onChange={(event) => setNewTaskDescription(event.target.value)}
+                placeholder="to do"
               />
 
             <button type="submit">+</button>
@@ -119,7 +122,7 @@ function ToDoList() {
       ) : (
         <p>Loading to-do list...</p>
       )}
-    </div>
+    </React.Fragment>
   );
 }
 

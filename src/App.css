@@ -9,8 +9,9 @@
 
 .App {
   background: linear-gradient(180deg, #56AAE0 0%, #95C5E9 100%);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  padding: 20px;
 }
 .logo {
   font-family: 'Pacifico';
@@ -26,11 +27,10 @@
   text-shadow: #F2502A 1px 2px 0px;
 }
 .list-container {
-  max-width: calc(100% - 100px);
-  margin: 0 50px;
-  height: 100vh;
+  height: calc(100vh - 290px);
   max-width: 700px;
   margin: auto;
+  position: relative;
 }
 form {
   background: #EA98A6;
@@ -64,12 +64,13 @@ button {
 }
 .list-inner {
   background-color: #E0DFF6;
-  height: 73%;
+  height: 100%;
   border: 3px solid #111827;
   border-top: none;
   padding: 2rem;
   border-radius: 0 0 7px 7px;
   position: relative;
+  overflow-y: scroll;
 }
 li {
   color: #2269DA;
@@ -86,14 +87,25 @@ li button {
   margin-left: 2rem;
   color: #DF2F06;
 }
-.completed {
-  text-decoration: line-through;
+p.completed:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #2269DA;
+  display: block;
+  position: relative;
+  top: -20px;
 }
 a.linkedIn-link {
   position: absolute;
   bottom: 10px;
-  right: 20px;
+  right: 40px;
   font-weight: 400;
   font-size: 15px;
   font-family: 'Outfit';
+}
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin-right: 21px;
 }
