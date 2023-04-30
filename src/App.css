@@ -1,111 +1,62 @@
 @font-face {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   src: url("./fonts/Outfit-Regular.ttf");
 }
 @font-face {
-  font-family: 'Pacifico';
+  font-family: "Pacifico";
   src: url("./fonts/Pacifico-Regular.ttf");
 }
-
 .App {
-  background: linear-gradient(180deg, #56AAE0 0%, #95C5E9 100%);
-  /* min-height: 100vh;
-  width: 100%;
-  padding: 20px; */
+  background: linear-gradient(180deg, #56aae0 0%, #95c5e9 100%);
 }
 .logo {
-  font-family: 'Pacifico';
-  text-shadow: #F2502A 1px 2px 0px;
-  background: #FDCF25;
-  /* font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1;
-  color: #111827;
-  text-align: center;
-  width: 100%;
-  padding: 1rem; */
+  font-family: "Pacifico";
+  text-shadow: #f2502a 1px 2px 0px;
+  background: #fdcf25;
 }
 .list-container {
   height: calc(100vh - 290px);
   max-width: 700px;
-  /* margin: auto;
-  position: relative; */
 }
 form {
-  /*display: flex;
-  flex-direction: column;
-  padding: 2rem; */
-  background: #EA98A6;
+  background: #ea98a6;
   border: 3px solid #111827;
   align-items: end;
   border-radius: 7px 7px 0 0;
 }
 input.list-input {
-  /* height: 47px;
-  width: 100%;
-  font-size: 32px;
-  padding-left: 1rem; */
   border: 3px solid #111827;
-  background: #D9D9D9;
-  font-family: 'Outfit';
+  background: #d9d9d9;
+  font-family: "Outfit";
 }
 button {
-  /* width: 41px;
-  height: 41px;
-  background-color: #F06604 !important;
-  margin-top: 2rem;
-  color: white;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  font-weight: 900; */
   line-height: -15;
 }
 .list-inner {
-  /* height: 100%;
-  padding: 2rem;
-  position: relative;
-  overflow-y: scroll; */
   border-top: none !important;
   border-radius: 0 0 7px 7px;
   border: 3px solid #111827;
-  background-color: #E0DFF6;
+  background-color: #e0dff6;
 }
 li {
-  /* font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  display: flex;
-  align-items: center; */
-  color: #2269DA;
-  font-family: 'Pacifico';
+  color: #2269da;
+  font-family: "Pacifico";
 }
 li button {
-  /* margin: 0;
-  margin-left: 2rem;*/
-  color: #DF2F06; 
-  background-color: #ff000000!important;
+  color: #df2f06;
+  background-color: #ff000000 !important;
 }
 p.completed:after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #2269DA;
+  background-color: #2269da;
   display: block;
   position: relative;
   top: -20px;
 }
 a.linkedIn-link {
-  /* position: absolute;
-  font-weight: 400;
-  font-size: 15px; */
   right: 40px;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   bottom: 10px;
 }
-/* input[type="checkbox"] {
-  width: 30px;
-  height: 30px;
-  margin-right: 21px;
-} */
