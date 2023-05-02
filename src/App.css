@@ -15,7 +15,7 @@
   background: #fdcf25;
 }
 .list-container {
-  height: calc(100vh - 290px);
+  height: calc(100vh - 40px);
   max-width: 700px;
 }
 form {
@@ -37,6 +37,13 @@ button {
   border-radius: 0 0 7px 7px;
   border: 3px solid #111827;
   background-color: #e0dff6;
+  overflow: hidden;
+  height: calc(100% - 250px);
+}
+ul {
+  margin-bottom: 20px;
+  height: 100%;
+  overflow-y: scroll;
 }
 li {
   color: #2269da;
@@ -59,4 +66,24 @@ a.linkedIn-link {
   right: 40px;
   font-family: "Outfit";
   bottom: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0dff6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2269da;
 }

@@ -133,6 +133,9 @@ function ToDoList() {
                 </li>
               ))}
             </ul>
+            
+
+            </div>
             <a
               href="https://www.linkedin.com/in/stewart-tuckwood-522808184/"
               target="_blank"
@@ -140,7 +143,7 @@ function ToDoList() {
             >
               developed by Stewart Tuckwood
             </a>
-          </div>
+      
         </section>
       ) : (
         <p>Loading to-do list...</p>
