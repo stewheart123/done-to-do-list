@@ -12,21 +12,18 @@
 .logo {
   font-family: "Pacifico";
   text-shadow: #f2502a 1px 2px 0px;
-  background: #fdcf25;
 }
 .list-container {
   height: calc(100vh - 40px);
   max-width: 700px;
 }
 form {
-  background: #ea98a6;
   border: 3px solid #111827;
   align-items: end;
   border-radius: 7px 7px 0 0;
 }
 input.list-input {
   border: 3px solid #111827;
-  background: #d9d9d9;
   font-family: "Outfit";
 }
 button {
@@ -36,7 +33,6 @@ button {
   border-top: none !important;
   border-radius: 0 0 7px 7px;
   border: 3px solid #111827;
-  background-color: #e0dff6;
   overflow: hidden;
   height: calc(100% - 250px);
 }
@@ -46,12 +42,7 @@ ul {
   overflow-y: scroll;
 }
 li {
-  color: #2269da;
   font-family: "Pacifico";
-}
-li button {
-  color: #df2f06;
-  background-color: #ff000000 !important;
 }
 p.completed:after {
   content: "";
@@ -67,22 +58,18 @@ a.linkedIn-link {
   font-family: "Outfit";
   bottom: 10px;
 }
-
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #e0dff6;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #555;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #2269da;
