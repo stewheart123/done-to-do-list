@@ -12,11 +12,11 @@ interface ToDoList {
 }
 
 function ToDoList() {
-  const [toDoList, setToDoList] = useState<ToDoList | null>(null); // sets the initial state value type
+  const [toDoList, setToDoList] = useState<ToDoList | null>(null);
   const [newTaskDescription, setNewTaskDescription] = useState("");
 
   useEffect(() => {
-    const storedToDoList = localStorage.getItem("toDoList"); // localStorage.getItem() fetches the item if it exists
+    const storedToDoList = localStorage.getItem("toDoList");
     if (storedToDoList) {
       setToDoList(JSON.parse(storedToDoList));
     } else {
